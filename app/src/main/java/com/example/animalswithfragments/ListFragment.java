@@ -11,8 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
-
 import java.util.ArrayList;
 
 public class ListFragment extends Fragment {
@@ -70,7 +68,7 @@ public class ListFragment extends Fragment {
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
 
-    AnimalViewAdapter adapter = new AnimalViewAdapter(animalList);
+        AnimalViewAdapter adapter = new AnimalViewAdapter(animalList);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
 
@@ -82,8 +80,8 @@ public class ListFragment extends Fragment {
                 bundle.putString("longDescriptionKey",animalList.get(position).longDescription);
                 bundle.putInt("imageIDKey",animalList.get(position).imageID);
                 getParentFragmentManager().setFragmentResult("animalKey", bundle);
-
                 ((MainActivity) getActivity()).onClick(view);
+
             }
         });
     }

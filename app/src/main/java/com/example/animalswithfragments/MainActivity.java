@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
                 tab.setText(array[position]);
             }
         }).attach();
-
     }
 
     public void onClick(View view)
